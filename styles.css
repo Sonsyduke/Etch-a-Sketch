@@ -187,4 +187,9 @@ body {
   height: 500px;
   width: 500px;
   border: 50px solid var(--red-border);
+  display: grid;
+}
+
+.square {
+  border: 1px solid var(--border);
 }
