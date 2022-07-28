@@ -1,7 +1,8 @@
 /* CSS VARIABLES */
 :root {
   --red-border: rgb(197, 14, 14);
-  --border: rgb(32, 32, 32);
+  --mainColor: rgb(32, 32, 32);
+  --black: rgb(32, 32, 32);
 }
 
 /* CSS RESET */
@@ -153,7 +154,7 @@ body {
 
 .button {
   background-color: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid var(--black);
   width: 100px;
   padding: 10px 0;
   font-size: 1rem;
@@ -162,7 +163,7 @@ body {
 .button:hover {
   cursor: pointer;
   color: white;
-  background-color: var(--border);
+  background-color: var(--black);
 }
 
 .options {
@@ -191,9 +192,9 @@ body {
 }
 
 .square {
-  border: 1px solid var(--border);
+  border: 1px solid var(--black);
 }
 
-.blank {
-  background-color: var(--border);
+.squareColor {
+  background-color: var(--mainColor);
 }

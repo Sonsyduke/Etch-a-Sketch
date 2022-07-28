@@ -4,18 +4,10 @@ let gridSize = document.querySelector("#gridSize");
 const resetBtn = document.querySelector("#reset");
 const blackBtn = document.querySelector("#black");
 const randomBtn = document.querySelector("#random");
+const colorPicker = document.querySelector("#colorPicker");
+const colorVariable = "--mainColor";
 
 createGrid(16);
-
-// resetBtn.addEventListener("click", function () {
-//   console.log("Reset");
-// });
-// blackBtn.addEventListener("click", function () {
-//   console.log("Black");
-// });
-// randomBtn.addEventListener("click", function () {
-//   console.log("Random");
-// });
 
 // Changing the value display of the grid
 gridSize.addEventListener("change", function () {
@@ -37,10 +29,16 @@ function createGrid(size) {
   for (let i = 0; i < amount; i++) {
     let square = document.createElement("div");
     square.addEventListener("mouseover", function () {
-      square.classList.add("blank");
+      square.classList.add("squareColor");
+    });
+    randomBtn.addEventListener("click", function () {
+      document.documentElement.style.setProperty(colorVariable, randomColor());
+    });
+    colorPicker.addEventListener("change", function (e) {
+      document.documentElement.style.setProperty(colorVariable, e.target.value);
     });
     resetBtn.addEventListener("click", function () {
-      square.classList.remove("blank");
+      square.classList.remove("squareColor");
     });
     square.classList.add("square");
     grid.append(square);
@@ -50,4 +48,13 @@ function createGrid(size) {
 // Changing the size of the board
 function changeGridSize(size) {
   createGrid(size);
+}
+
+// Random color generator
+function randomColor() {
+  const red = Math.floor(Math.random() * 255) + 1;
+  const green = Math.floor(Math.random() * 255) + 1;
+  const blue = Math.floor(Math.random() * 255) + 1;
+  let randomColor = `rgb(${red}, ${green}, ${blue})`;
+  return randomColor;
 }
