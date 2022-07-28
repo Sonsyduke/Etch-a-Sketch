@@ -193,3 +193,7 @@ body {
 .square {
   border: 1px solid var(--border);
 }
+
+.blank {
+  background-color: var(--border);
+}
