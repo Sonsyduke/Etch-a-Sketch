@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -15,8 +21,15 @@
           <button class="button">Reset</button>
           <button class="button">Black</button>
           <button class="button">Random</button>
-          <input type="color" name="color" id="colorPicker" />
-          <input type="range" id="gridSize" name="gridSize" max="64" />
+          <div class="color-pick">
+            <label for="color" class="label-name">Pick a Color</label>
+            <input type="color" name="color" id="colorPicker" />
+          </div>
+
+          <div class="color-pick">
+            <label for="color" class="label-name">16x16</label>
+            <input type="range" id="gridSize" name="gridSize" max="64" />
+          </div>
         </div>
       </section>
       <section class="grid"></section>
