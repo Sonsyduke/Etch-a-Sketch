@@ -39,7 +39,9 @@ function createGrid(size) {
     square.addEventListener("mouseover", function () {
       square.classList.add("blank");
     });
-
+    resetBtn.addEventListener("click", function () {
+      square.classList.remove("blank");
+    });
     square.classList.add("square");
     grid.append(square);
   }
