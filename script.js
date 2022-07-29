@@ -31,14 +31,17 @@ function createGrid(size) {
     square.addEventListener("mouseover", function () {
       square.classList.add("squareColor");
     });
+    resetBtn.addEventListener("click", function () {
+      square.classList.remove("squareColor");
+    });
+    blackBtn.addEventListener("click", function () {
+      document.documentElement.style.setProperty(colorVariable, "black");
+    });
     randomBtn.addEventListener("click", function () {
       document.documentElement.style.setProperty(colorVariable, randomColor());
     });
     colorPicker.addEventListener("change", function (e) {
       document.documentElement.style.setProperty(colorVariable, e.target.value);
-    });
-    resetBtn.addEventListener("click", function () {
-      square.classList.remove("squareColor");
     });
     square.classList.add("square");
     grid.append(square);
