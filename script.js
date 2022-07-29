@@ -5,6 +5,7 @@ const resetBtn = document.querySelector("#reset");
 const blackBtn = document.querySelector("#black");
 const randomBtn = document.querySelector("#random");
 const colorPicker = document.querySelector("#colorPicker");
+const esarerBtn = document.querySelector("#eraser");
 const colorVariable = "--mainColor";
 
 createGrid(16);
